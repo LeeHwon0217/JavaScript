@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sessionStaorage</title>
+  </head>
+  <body>
+    <h2>이 탭에서 방문한 횟수: <span id="counter">0</span>회</h2>
+    <!-- 탭마다 다르다 -->
+
+    <script>
+      let count = sessionStorage.getItem("visitCount");
+      count = count ? Number(count) + 1 : 1; // count가 null이면 1로 초기화
+
+      sessionStorage.setItem("visitCount", count); // 세션 스토리지에 저장
+
+      document.getElementById("counter").innerText = count; // 화면에 표시
+    </script>
+  </body>
+</html>

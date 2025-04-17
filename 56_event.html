@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+  </head>
+  <body>
+    <h2>이벤트</h2>
+    <button onclick="sayHello()">인사하기</button>
+    <button id="btn">누르세요</button>
+    <button id="eventBtn">이벤트 리스너 사용</button>
+
+    <script>
+      function sayHello() {
+        alert("안녕하세요!");
+      }
+      const btn = document.getElementById("btn");
+      btn.onclick = function () {
+        // 함수가 계속 살아있지 않아 함수를 아낄 수 있다
+        alert("버튼이 클릭되었습니다!");
+      };
+      const eventBtn = document.getElementById("eventBtn");
+      eventBtn.addEventListener("click", function () {
+        //이벤트 여러개를 사용할 수 있다. 속성으로 하면 안되는 브라우저도 있음
+        alert("addEventListner로 연결된 이벤트입니다!");
+      });
+      eventBtn.addEventListener("mouseenter", function () {
+        eventBtn.style.backgroundColor = "deepskyblue";
+      });
+    </script>
+  </body>
+</html>

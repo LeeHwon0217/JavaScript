@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정규식</title>
+  </head>
+  <body>
+    <script>
+      /* 
+            /패턴/      :고정성성
+            new RegExp("패턴")     : 확장성
+            - 패턴: 정규식의 규칙을 정의하는 문자열
+
+        */
+      const regex = /apple/; // apple이라는 문자열을 찾는 정규식
+      console.log(regex.test("I have an apple")); // true 패턴이 있는지를 확인.
+      console.log(regex.test("I have an banana")); // false
+
+      const text = "내 핸드폰 번호는 010-7734-4653 입니다";
+      const result = text.match(/\d{3}-\d{4}-\d{4}/); // xxx-xxxx-xxxx 패턴을 찾는 정규식
+      console.log(result[0]); // 010-7734-4653
+
+      const word = "내 이름은 김사과입니다";
+      const clean = word.replace(/김사과/, "****");
+      console.log(clean); // 내 이름은 ****입니다
+    </script>
+  </body>
+</html>
