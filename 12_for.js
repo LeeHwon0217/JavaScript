@@ -10,12 +10,13 @@ for (let i = 1; i <= 10; i = i + 2) {
 }
 */
 
-/* 구구단 출력 */
-// for (let dan = 2; dan <= 9; dan++) {
-//   for (let i = 1; i <= 9; i++) {
-//     console.log(`${dan}*${i}=${dan * i}`);
-//   }
-// }
+/* 구구단 출력 
+for (let dan = 2; dan <= 9; dan++) {
+  for (let i = 1; i <= 9; i++) {
+    console.log(`${dan}*${i}=${dan * i}`);
+  }
+}
+  */
 
 let a = 2;
 let b = 1;
