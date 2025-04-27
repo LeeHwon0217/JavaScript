@@ -1,12 +1,22 @@
-const apple = {
-  name: "사과",
-  age: 20,
-  address: { si: "서울시", gu: "서초구", dong: "양재동" },
-  job: "개발자",
-};
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
 
-const { pet = "루시" } = apple; // pet이 없으면 루시로 초기화. 새로 만든다
+const animal = new Animal("코끼리");
 
-const { job: hobby } = apple; // job을 hobby로 바꾼다
+console.log(animal.name); // 코끼리
 
-console.log(apple);
+class Dog extends Animal {
+  constructor(name, color) {
+    super(name); // Animal의 생성자를 호출. 부모의 name이어서 자식에서는 this.name이라고 할 수 없다 흠
+    this.color = color;
+  }
+  showInfo() {
+    console.log(`${this.name}는 ${this.color} 강아지입니다`);
+  }
+}
+
+const dog = new Dog("루시", "흰색");
+dog.showInfo(); // 루시는 흰색 강아지입니다
