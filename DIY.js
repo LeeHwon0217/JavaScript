@@ -1,22 +1,6 @@
-class Animal {
-  constructor(name) {
-    this.name = name;
-  }
-}
+// min() : 가장 작은 수를 반환
+console.log(Math.min()); // Infinity.양의 무한대
+console.log(Math.min(1, -2, 3, -"100")); // -100 가장 작은 수
+console.log(Math.min(1, -2, "천", -"100")); //NaN 숫자가 아냐, 계산할 수 없어
 
-const animal = new Animal("코끼리");
-
-console.log(animal.name); // 코끼리
-
-class Dog extends Animal {
-  constructor(name, color) {
-    super(name); // Animal의 생성자를 호출. 부모의 name이어서 자식에서는 this.name이라고 할 수 없다 흠
-    this.color = color;
-  }
-  showInfo() {
-    console.log(`${this.name}는 ${this.color} 강아지입니다`);
-  }
-}
-
-const dog = new Dog("루시", "흰색");
-dog.showInfo(); // 루시는 흰색 강아지입니다
+console.log();
