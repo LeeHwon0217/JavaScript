@@ -6,7 +6,7 @@ console.log("년: ", now.getFullYear()); // 년도
 console.log("월: ", now.getMonth() + 1); // 월 (0부터 시작하므로 1을 더해줌)
 console.log("일: ", now.getDate()); // 일
 
-const bitrthday = new Date(1998, 2, 17);
+const bitrthday = new Date(1998, 1, 17);
 console.log("생일: ", bitrthday.toDateString()); //얘도 달이 이상하다
 
 const nowTime = now.getTime();
