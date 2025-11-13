@@ -11,7 +11,7 @@ console.log(obj2.name);
 const obj1 = { name: "김사과", age: 20 };
 const obj2 = { ...obj1 }; // obj1을 복사해서 obj2에 넣는다, assign과 같은 기능. 얕은 복사
 obj2.age = 25; // obj2의 age를 바꿔도 obj1은 안바뀜
-console.log(obj1.age); // obj1의 age는 그대로
+console.log(obj1.age); // obj1의 age는 그대로2
 console.log(obj2.age); // obj2의 age는 바뀜
 */
 
